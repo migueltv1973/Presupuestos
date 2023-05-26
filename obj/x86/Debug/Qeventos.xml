@@ -1,0 +1,653 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Qeventos
+</name>
+</assembly>
+<members>
+<member name="T:SGE_Eventos.My.Resources.Resources">
+<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:SGE_Eventos.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:SGE_Eventos.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventos_consolidadoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventos_consolidadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SGE_Eventos.DataSet1.eventos_consolidadoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ModelAppointmentAdded(System.Object,DevComponents.Schedule.Model.AppointmentEventArgs)">
+ <summary>
+ Event sent when an appointment is added to the Model
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ModelAppointmentRemoved(System.Object,DevComponents.Schedule.Model.AppointmentEventArgs)">
+ <summary>
+ Event sent when an appointment is removed from the Model
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AppointmentViewChanged(System.Object,DevComponents.DotNetBar.Schedule.AppointmentViewChangedEventArgs)">
+ <summary>
+ Event sent when an appointment is either moved or resized
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AppointmentReminder(System.Object,DevComponents.Schedule.Model.ReminderEventArgs)">
+ <summary>
+ Event sent when an appointment reminder is reached
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AppointmentStartTimeReached(System.Object,DevComponents.Schedule.Model.AppointmentEventArgs)">
+ <summary>
+ Event sent when an appointment StartTime is reached
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddSampleAppointments">
+ <summary>
+ Adds some example appointments to the Calendar Model
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddAppointment(System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+ <summary>
+ Adds the specified appointment to the model
+ </summary>
+ <param name="s">Appointment subject</param>
+ <param name="startTime">Appointment start time</param>
+ <param name="endTime">Appointment end time</param>
+ <param name="color">Appointment color</param>
+ <param name="marker">Appointment marker</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddHolidaySchedule">
+ <summary>
+ Adds our Holiday schedule, starting January 1, 2010
+ and continuing for the next 10 years
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddHoliday(System.String,System.Int32,System.Int32)">
+ <summary>
+ Adds the given "Absolute" Holiday to the calendar
+ </summary>
+ <param name="title">Holiday title</param>
+ <param name="month">Month</param>
+ <param name="day">Day</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddHoliday(System.String,System.Int32,DevComponents.Schedule.Model.eRelativeDayInMonth,System.DayOfWeek)">
+ <summary>
+ Adds the given "Relative" Holiday to the calendar
+ </summary>
+ <param name="title">Holiday title</param>
+ <param name="month">Month</param>
+ <param name="relDim">Day in Month</param>
+ <param name="dow">Day of Week</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.RelativeDate(System.Int32,DevComponents.Schedule.Model.eRelativeDayInMonth,System.DayOfWeek)">
+ <summary>
+ Calculates the date from the given
+ relative day in the month and day of the week
+ </summary>
+ <param name="month">Month</param>
+ <param name="relDim">Relative Day in Month</param>
+ <param name="dow">Day of Week</param>
+ <returns>Date</returns>
+</member>
+<member name="M:SGE_Eventos.c_eventos.NewHoliday(System.String,System.DateTime)">
+ <summary>
+ Allocates a new Holiday appointment
+ </summary>
+ <param name="title">Holiday title</param>
+ <param name="startTime">Start time</param>
+ <returns>Allocated appointment</returns>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddEaster">
+ <summary>
+ Add Easter appointments for the next 10 years
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.EasterDate(System.Int32)">
+ <summary>
+ Gets the Date for Easter for the given year
+ </summary>
+ <param name="year">Year</param>
+ <returns>Easter date</returns>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ButtonDay_Click(System.Object,System.EventArgs)">
+ <summary>
+ Day view selection
+ </summary>
+ <param name="sender">PopupItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ButtonWeek_Click(System.Object,System.EventArgs)">
+ <summary>
+ Week view selection
+ </summary>
+ <param name="sender">PopupItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ButtonMonth_Click(System.Object,System.EventArgs)">
+ <summary>
+ Month view selection
+ </summary>
+ <param name="sender">PopupItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnYear_Click(System.Object,System.EventArgs)">
+ <summary>
+ Year view selection
+ </summary>
+ <param name="sender">PopupItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ButtonTimeLine_Click(System.Object,System.EventArgs)">
+ <summary>
+ TimeLine view selection
+ </summary>
+ <param name="sender">PopupItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.calendarView1_ItemDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles Appointment View double clicks
+ </summary>
+ <param name="sender">AppointmentView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.calendarView1_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles CalendarView MouseUp events
+ </summary>
+ <param name="sender">Varied sender</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.BaseViewMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles Day, Week, and Month View MouseUp events
+ </summary>
+ <param name="sender">BaseView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InContentMouseUp(DevComponents.DotNetBar.Schedule.BaseView,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles BaseView InContent MouseUp events
+ </summary>
+ <param name="view">BaseView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.bi_CondensedClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles InContentContextMenu Condensed selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.bi_PageNavigatorClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles InContentContextMenu PageNavigator selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.IsDateSelected(System.DateTime,System.DateTime)">
+ <summary>
+ Determines if the given date range is within the currently selected
+ CalendarView selection range (DateSelectionStart to DateSelectionEnd)
+ </summary>
+ <param name="startDate">Start date range</param>
+ <param name="endDate">End date range</param>
+ <returns>True if selected</returns>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles BaseView "Add Appointment" 
+ ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddNewAppointment(System.DateTime,System.DateTime)">
+ <summary>
+ Adds a new appointment at the user selected time
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InDayOfWeekHeaderMouseUp(DevComponents.DotNetBar.Schedule.BaseView,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles BaseView InDayOfWeekHeader MouseUp events.
+ </summary>
+ <param name="view">BaseView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miCalendarColor_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles selection of a ContextMenu color item
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miShowSideBar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles ContextMenu "Show" for the SideBar panel
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miHideSideBar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles ContextMenu "Hide" for the SideBar panel
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InMonthHeaderMouseUp(DevComponents.DotNetBar.Schedule.BaseView,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles BaseView InMonthHeader MouseUp events.
+ </summary>
+ <param name="view">BaseView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miShowGridLines_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles ContextMenu "Show GridLines" for the Year View
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miHideGridLines_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles ContextMenu "Hide GridLines" for the Year View
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miCycleHighlight_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles ContextMenu "Cycle Highlight" for the Year View.  This
+ routine cycles through all the possible Day Link Highlight values
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.NextLinkStyle">
+ <summary>
+ Sets the next available Link style
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.YearViewDrawDayBackground(System.Object,DevComponents.DotNetBar.Schedule.YearViewDrawDayBackgroundEventArgs)">
+ <summary>
+ Draws the YearView day background
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InSideBarMouseUp(DevComponents.DotNetBar.Schedule.BaseView,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles SideBar MouseUp events
+ </summary>
+ <param name="view">BaseView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InCondensedViewMouseUp(System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles Mouse Up events in the CondensedView
+ area of the control
+ </summary>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AppointmentViewMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles AppointmentView MouseUp events
+ </summary>
+ <param name="sender">AppointmentView</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles BaseView "Delete Appointment" 
+ ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AllDayPanelMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles AllDayPanel MouseUp events
+ </summary>
+ <param name="sender">AllDayPanel</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miShrink_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "Shrink" ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miGrow_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "Grow" ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miReset_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "Reset" ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.TimeRulerPanelMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles TimeRulerPanel MouseUp events
+ </summary>
+ <param name="sender">TimeRulerPanel</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.miTimeDuration_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "TimeSlotDuration" ContextMenu selections
+ </summary>
+ <param name="sender">MenuItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.TimeLineHeaderPanelMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles Mouse Up events in the TimeLineHeaderPanel.
+ 
+ (The TimeLineHeaderPanel is the area at the top of the
+ TimeLineView that holds the Period and Interval Headers.)
+ </summary>
+ <param name="sender">TimeLineHeaderPanel</param>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InPeriodHeaderMouseUp(System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles MouseUp events in the Period Header
+ </summary>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InPeriodHeaderHide_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles Period Header "Hide" menu selections
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnPeriodMinutes_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Handles PeriodHeaderContextMenu "Minute" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnPeriodHours_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Handles PeriodHeaderContextMenu "Hours" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnPeriodDays_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Handles PeriodHeaderContextMenu "Days" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnPeriodYears_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ Handles PeriodHeaderContextMenu "Years" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.InIntervalHeaderMouseUp(System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Handles MouseUp events in the IntervalHeader
+ </summary>
+ <param name="e">MouseEventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddIntervalMinutes">
+ <summary>
+ Adds Interval "Minute" items
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddIntervalHours">
+ <summary>
+ Adds Interval "Hour" items
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddIntervalDays">
+ <summary>
+ Adds Interval "Day" items
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddIntervalYears">
+ <summary>
+ Adds Interval "Year" items
+ </summary>
+</member>
+<member name="M:SGE_Eventos.c_eventos.AddIntervalItem(System.Int32)">
+ <summary>
+ Adds individual Interval items
+ </summary>
+ <param name="i">Item to add</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.bi_IntervalClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles Interval time selections
+ </summary>
+ <param name="sender">ButtonItem</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnIntervalHeaderShow_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles IntervalHeaderContextMenu "Show Header" selections
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.ShowContextMenu(DevComponents.DotNetBar.ButtonItem)">
+ <summary>
+ Shows the given ContextMenu
+ </summary>
+ <param name="cm">ContextMenu to show</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnCondensedViewAll_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "AllResources" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnCondensedViewSelected_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "SelectedResource" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnCondensedViewHidden_Click(System.Object,System.EventArgs)">
+ <summary>
+ Handles "Hidden" selection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2007Blue_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2007Blue color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2007Silver_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2007Silver color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2007Black_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2007Black color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2007VistaGlass_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2007VistaGlass color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2010Blue_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2010Blue color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>    
+</member>
+<member name="M:SGE_Eventos.c_eventos.Office2010Silver_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Office2010Silver color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.Windows7Blue_Click(System.Object,System.EventArgs)">
+ <summary>
+ Selects the Windows7Blue color scheme
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnToday_Click(System.Object,System.EventArgs)">
+ <summary>
+ Sets the calendar view display to today's date
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewAppointment_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new appointment to the calendar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewAllDay_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new All Day event to the calendar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewMultiDay_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new Multi-Day event to the calendar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewRecurring_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new recurring appointment to the calendar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewReminder_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new appointment with a reminder in 2 minutes
+ </summary>
+ <param name="sender">btnNewReminder</param>
+ <param name="e">EventArgs</param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.btnNewStartReached_Click(System.Object,System.EventArgs)">
+ <summary>
+ Adds a new appointment with Start Notification
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.c_eventos.calendarView1_SelectedViewChanged(System.Object,DevComponents.DotNetBar.Schedule.SelectedViewEventArgs)">
+ <summary>
+ Processes CalendarView SelectedViewChanged events
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SGE_Eventos.cifradoRSA.crearXMLclaves(System.String)">
+ <summary>
+ Guarda las claves en el fichero indicado
+ </summary>
+</member>
+<member name="M:SGE_Eventos.cifradoRSA.clavesXML(System.String)">
+ <summary>
+ Lee las claves del fichero y las devuelve como una cadena
+ que se puede usar con FromXmlString de RSACryptoServiceProvider
+ </summary>
+</member>
+<member name="M:SGE_Eventos.cifradoRSA.cifrar(System.String,System.String)">
+ <summary>
+ Cifra el texto indicado usando las claves en formato XML
+ </summary>
+</member>
+<member name="M:SGE_Eventos.cifradoRSA.descifrar(System.Byte[],System.String)">
+ <summary>
+ Descifra el array de bytes usando las claves en formato XML
+ </summary>
+</member>
+</members>
+</doc>

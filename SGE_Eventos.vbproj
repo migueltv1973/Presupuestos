@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CAE737A-2541-4EB7-8FCC-38666F954462}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SGE_Eventos.My.MyApplication</StartupObject>
+    <RootNamespace>SGE_Eventos</RootNamespace>
+    <AssemblyName>Qeventos</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Qeventos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Qeventos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>imgs\control panel.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DXCore.Controls.Data.v6.3, Version=11.2.10.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3, Version=11.2.10.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DevExpress 2011.2\IDETools\System\DXCore\BIN\DevExpress.DXCore.Controls.Utils.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=11.2.10.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.5.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DevComponents.DotNetBar" />
+    <Import Include="DevComponents.DotNetBar.Schedule" />
+    <Import Include="DevComponents.Schedule.Model" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dataset\dsEventos.vb">
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataset\dsEventos1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\base.Designer.vb">
+      <DependentUpon>base.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\base.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\baseReporte.Designer.vb">
+      <DependentUpon>baseReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\baseReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\c_eventos.Designer.vb">
+      <DependentUpon>c_eventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\c_eventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_consolidar.Designer.vb">
+      <DependentUpon>rpt_consolidar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_consolidar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\login.designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\m_contactos.designer.vb">
+      <DependentUpon>m_contactos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\m_contactos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\m_recursos.Designer.vb">
+      <DependentUpon>m_recursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\m_recursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\m_sucursales.designer.vb">
+      <DependentUpon>m_sucursales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\m_sucursales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\principal.Designer.vb">
+      <DependentUpon>principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\p_actualiza_orden_grid.Designer.vb">
+      <DependentUpon>p_actualiza_orden_grid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\p_actualiza_orden_grid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\p_eventos.Designer.vb">
+      <DependentUpon>p_eventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\p_eventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\p_notas.designer.vb">
+      <DependentUpon>p_notas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\p_notas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\rptForm.designer.vb">
+      <DependentUpon>rptForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rptForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\rpt_reservas.Designer.vb">
+      <DependentUpon>rpt_reservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\rpt_reservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="librerias\actualizar.vb" />
+    <Compile Include="librerias\cifradoRSA.vb" />
+    <Compile Include="librerias\Conexion.vb" />
+    <Compile Include="librerias\consultas.vb" />
+    <Compile Include="librerias\eliminar.vb" />
+    <Compile Include="librerias\insertar.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="librerias\General.vb" />
+    <Compile Include="reporte\listado_ordentrabajo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listado_ordentrabajo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\modelo.vb">
+      <DependentUpon>modelo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="reporte\rptOrdenTrabajo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOrdenTrabajo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\rpt_cotizacion.vb">
+      <DependentUpon>rpt_cotizacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="reporte\rpt_cotizacion_sunat.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_cotizacion_sunat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\rpt_ordendetrabajo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_ordendetrabajo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\rpt_reservas_consolidado.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_reservas_consolidado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\rpt_reservas_consolidado_xfac.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_reservas_consolidado_xfac.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte\rpt_reservas_consolidado_xid.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_reservas_consolidado_xid.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\rpt_EtiquetasOT.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_EtiquetasOT.rpt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\base.resx">
+      <DependentUpon>base.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\baseReporte.resx">
+      <DependentUpon>baseReporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\c_eventos.resx">
+      <DependentUpon>c_eventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\m_contactos.resx">
+      <DependentUpon>m_contactos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\m_recursos.resx">
+      <DependentUpon>m_recursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\m_sucursales.resx">
+      <DependentUpon>m_sucursales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\principal.resx">
+      <DependentUpon>principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\p_actualiza_orden_grid.resx">
+      <DependentUpon>p_actualiza_orden_grid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\p_eventos.resx">
+      <DependentUpon>p_eventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\p_notas.resx">
+      <DependentUpon>p_notas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\rptForm.resx">
+      <DependentUpon>rptForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\rpt_consolidar.resx">
+      <DependentUpon>rpt_consolidar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\rpt_reservas.resx">
+      <DependentUpon>rpt_reservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\listado_ordentrabajo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>listado_ordentrabajo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\modelo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>modelo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rptOrdenTrabajo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOrdenTrabajo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_cotizacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_cotizacion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_cotizacion_sunat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_cotizacion_sunat.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_ordendetrabajo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_ordendetrabajo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_reservas_consolidado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_reservas_consolidado.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_reservas_consolidado_xfac.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_reservas_consolidado_xfac.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_reservas_consolidado_xid.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_reservas_consolidado_xid.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\rpt_EtiquetasOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_EtiquetasOT.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="dataset\DataSet1.xsc">
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </None>
+    <None Include="dataset\dsEventos.xsc">
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </None>
+    <None Include="dataset\dsEventos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEventos1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dataset\DataSet1.xss">
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </None>
+    <None Include="dataset\dsEventos.xss">
+      <DependentUpon>dsEventos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="recursos\app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\16 %28Ok%29.ico" />
+    <None Include="imgs\16 %28Ok%29.png" />
+    <None Include="imgs\10194.ico" />
+    <None Include="imgs\10194.png" />
+    <None Include="imgs\10239.ico" />
+    <None Include="imgs\10239.png" />
+    <None Include="imgs\almacen22.png" />
+    <None Include="imgs\almacen24.png" />
+    <None Include="imgs\applications.ico" />
+    <None Include="imgs\applications18.png" />
+    <None Include="imgs\applications22.png" />
+    <None Include="imgs\ark22.png" />
+    <None Include="imgs\Back.ico" />
+    <None Include="imgs\back_22.png" />
+    <None Include="imgs\back22.png" />
+    <None Include="imgs\best.ico" />
+    <None Include="imgs\Best.png" />
+    <None Include="imgs\Best22.png" />
+    <None Include="imgs\billboard.ico" />
+    <None Include="imgs\book.png" />
+    <None Include="imgs\boton.png" />
+    <None Include="imgs\Boy.png" />
+    <None Include="imgs\brick house.ico" />
+    <None Include="imgs\bundle.ico" />
+    <None Include="imgs\buscar18.png" />
+    <None Include="imgs\buscar20.png" />
+    <None Include="imgs\buscar22.png" />
+    <None Include="imgs\c_buscarD.png" />
+    <None Include="imgs\c_buscarD18.png" />
+    <None Include="imgs\c_buscarI.png" />
+    <None Include="imgs\calculator22.png" />
+    <None Include="imgs\calculator22b.png" />
+    <None Include="imgs\cancel22.png" />
+    <None Include="imgs\catalogo.png" />
+    <None Include="imgs\catalogo2-16.ico" />
+    <None Include="imgs\catalogo16.ico" />
+    <None Include="imgs\Catalogo24.png" />
+    <None Include="imgs\Catalogo32.bmp" />
+    <None Include="imgs\catalogoLimpio.png" />
+    <None Include="imgs\chart22.png" />
+    <None Include="imgs\Clien list.png" />
+    <None Include="imgs\CLOSE.ICO" />
+    <None Include="imgs\CLOSE18.png" />
+    <None Include="imgs\CLOSE20.png" />
+    <None Include="imgs\CLOSE22.png" />
+    <None Include="imgs\continuar_a20.png" />
+    <None Include="imgs\continuar_a22.png" />
+    <None Include="imgs\continuar16.png" />
+    <None Include="imgs\continuar18.png" />
+    <None Include="imgs\continuar20.png" />
+    <None Include="imgs\continuar22.png" />
+    <None Include="imgs\control panel.ico" />
+    <None Include="imgs\cubes.png" />
+    <None Include="imgs\dolar_billete.png" />
+    <None Include="imgs\dollar20.png" />
+    <None Include="imgs\dollar22.png" />
+    <None Include="imgs\dollar28.png" />
+    <None Include="imgs\down.ico" />
+    <None Include="imgs\down_22.png" />
+    <None Include="imgs\down18.png" />
+    <None Include="imgs\down22.png" />
+    <None Include="imgs\ejecutar22.png" />
+    <None Include="imgs\Error22.png" />
+    <None Include="imgs\Error-22.png" />
+    <None Include="imgs\estadisticas22.png" />
+    <None Include="imgs\Euro.png" />
+    <None Include="imgs\FichaTecnica.png" />
+    <None Include="imgs\FichaTecnica20.png" />
+    <None Include="imgs\FichaTecnica22.png" />
+    <None Include="imgs\filter16_h.ico" />
+    <None Include="imgs\filter22.png" />
+    <None Include="imgs\filtrar.png" />
+    <None Include="imgs\folder_find.ico" />
+    <None Include="imgs\folder_find18.png" />
+    <None Include="imgs\folder_find22.png" />
+    <None Include="imgs\fondo verde-1.jpg" />
+    <None Include="imgs\fondo verde-2.jpg" />
+    <None Include="imgs\Fondo_02.jpg" />
+    <None Include="imgs\Fondo_02.png" />
+    <None Include="imgs\Fondo1024.jpg" />
+    <None Include="imgs\Fondo1024-Empanaderia.jpg" />
+    <None Include="imgs\Fondo1024-Empanaderia.png" />
+    <None Include="imgs\Fondo1024-PRUSAC.jpg" />
+    <None Include="imgs\Fondo1024-PRUSAC.png" />
+    <None Include="imgs\Fondo1024-RNG.jpg" />
+    <None Include="imgs\Fondo1024-RNG.png" />
+    <None Include="imgs\Fondo1024-RosaNautica - copia - copia.png" />
+    <None Include="imgs\Fondo1024-RosaNautica.jpg" />
+    <None Include="imgs\Fondo1024-RosaNautica.png" />
+    <None Include="imgs\forward18.png" />
+    <None Include="imgs\forward20.png" />
+    <None Include="imgs\forward22.png" />
+    <None Include="imgs\ftp.ico" />
+    <None Include="imgs\generar.bmp" />
+    <None Include="imgs\generar.ico" />
+    <None Include="imgs\generar.png" />
+    <None Include="imgs\generar2.png" />
+    <None Include="imgs\go_22.png" />
+    <None Include="imgs\herramientas22.png" />
+    <None Include="imgs\History.ico" />
+    <None Include="imgs\history22.png" />
+    <None Include="imgs\home22.png" />
+    <None Include="imgs\home28.png" />
+    <None Include="imgs\important22.png" />
+    <None Include="imgs\info.bmp" />
+    <None Include="imgs\info22.bmp" />
+    <None Include="imgs\info22.png" />
+    <None Include="imgs\kardex.gif" />
+    <None Include="imgs\kardex.png" />
+    <None Include="imgs\List.ico" />
+    <None Include="imgs\lock.ico" />
+    <None Include="imgs\lock_add.ico" />
+    <None Include="imgs\lock24.ico" />
+    <None Include="..\loginsga.png">
+      <Link>imgs\loginsga.png</Link>
+    </None>
+    <None Include="imgs\logo.JPG" />
+    <None Include="imgs\logo_brecado..jpg" />
+    <None Include="imgs\logo_ficus..jpg" />
+    <None Include="imgs\logo_prusac..jpg" />
+    <None Include="imgs\logo_rnautica..jpg" />
+    <None Include="imgs\logoPrusacTrans.png" />
+    <None Include="imgs\logosga.png" />
+    <None Include="imgs\LOGOSOS.JPG" />
+    <None Include="imgs\logosss %282%29.jpg" />
+    <None Include="imgs\logosss.jpg" />
+    <None Include="imgs\m_añadir.png" />
+    <None Include="imgs\m_añadir18.png" />
+    <None Include="imgs\m_añadir20.png" />
+    <None Include="imgs\m_borrar.png" />
+    <None Include="imgs\m_cancelar.png" />
+    <None Include="imgs\m_editar.png" />
+    <None Include="imgs\m_grabar.png" />
+    <None Include="imgs\m_grabar20.png" />
+    <None Include="imgs\MODPC07E22.png" />
+    <None Include="imgs\Monedas22.png" />
+    <None Include="imgs\Monedas24.png" />
+    <None Include="imgs\monedas28.png" />
+    <None Include="imgs\nfs_mount22.png" />
+    <None Include="imgs\Notas.png" />
+    <None Include="imgs\objects22.png" />
+    <None Include="imgs\ok18.png" />
+    <None Include="imgs\ok20.png" />
+    <None Include="imgs\ok22.png" />
+    <None Include="imgs\Open2.ico" />
+    <None Include="imgs\Open2.png" />
+    <None Include="imgs\Open18.png" />
+    <None Include="imgs\Open20.png" />
+    <None Include="imgs\Open24.ico" />
+    <None Include="imgs\ordenar_asc16.png" />
+    <None Include="imgs\ordenar_asc22.png" />
+    <None Include="imgs\ordenar_desc16.png" />
+    <None Include="imgs\ordenar_desc22.png" />
+    <None Include="imgs\pass03.png" />
+    <None Include="imgs\pass03-28.png" />
+    <None Include="imgs\pdf22.png" />
+    <None Include="imgs\Pilot_24.png" />
+    <None Include="imgs\Pilot_32.png" />
+    <None Include="imgs\PRINT.ICO" />
+    <None Include="imgs\print_preview.png" />
+    <None Include="imgs\print_preview18.png" />
+    <None Include="imgs\print_preview20.png" />
+    <None Include="imgs\printer.ico" />
+    <None Include="imgs\procedimiento.png" />
+    <None Include="imgs\proveedor.png" />
+    <None Include="imgs\punto01.png" />
+    <None Include="imgs\punto02.png" />
+    <None Include="imgs\punto03.png" />
+    <None Include="imgs\recetas.png" />
+    <None Include="imgs\rendimiento.gif" />
+    <None Include="imgs\rendimiento22.png" />
+    <None Include="imgs\retroceder.png" />
+    <None Include="imgs\rExcel.png" />
+    <None Include="imgs\rn.bmp" />
+    <None Include="imgs\rn.ico" />
+    <None Include="imgs\rn16.ico" />
+    <None Include="imgs\rn22.png" />
+    <None Include="imgs\rn24.ico" />
+    <None Include="imgs\Rubik-Cube-22.png" />
+    <None Include="imgs\Rubik-Cube-24.png" />
+    <None Include="imgs\SECUR05.ICO" />
+    <None Include="imgs\SECUR05_22.png" />
+    <None Include="imgs\SECUR05-28.png" />
+    <None Include="imgs\sga.png" />
+    <None Include="imgs\sga2.ico" />
+    <None Include="imgs\sga48.ico" />
+    <None Include="imgs\sga128.ico" />
+    <None Include="imgs\shopping cart full18.png" />
+    <None Include="imgs\shopping cart full20.png" />
+    <None Include="imgs\shopping cart full22.png" />
+    <None Include="imgs\shopping cart full24.png" />
+    <None Include="imgs\shopping cart22.png" />
+    <None Include="imgs\statistics2.ico" />
+    <None Include="imgs\synaptic.png" />
+    <None Include="imgs\synaptic22.png" />
+    <None Include="imgs\Tr.ico" />
+    <None Include="imgs\tr-022.png" />
+    <None Include="imgs\tr-024.png" />
+    <None Include="imgs\transaction_logfile.ico" />
+    <None Include="imgs\transforma.ico" />
+    <None Include="imgs\transforma.png" />
+    <None Include="imgs\transforma16.ico" />
+    <None Include="imgs\transforma16.png" />
+    <None Include="imgs\Transformaciones.bmp" />
+    <None Include="imgs\transporte.png" />
+    <None Include="imgs\Undo.ico" />
+    <None Include="imgs\Undo-2.ico" />
+    <None Include="imgs\up.ico" />
+    <None Include="imgs\up_22.png" />
+    <None Include="imgs\up22.png" />
+    <None Include="imgs\User group.png" />
+    <None Include="imgs\User.png" />
+    <None Include="imgs\user22.png" />
+    <None Include="imgs\users22.png" />
+    <None Include="imgs\_print.gif" />
+    <None Include="imgs\loginsge.png" />
+    <Content Include="Calender.ico" />
+    <Content Include="Component.ico" />
+    <Content Include="recursos\CalendarView.ico" />
+    <None Include="recursos\m_cancelar.png" />
+    <None Include="recursos\m_borrar.png" />
+    <None Include="recursos\m_grabar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Outlook1">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
